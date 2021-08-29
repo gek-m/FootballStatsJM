@@ -3,6 +3,7 @@ package com.example.footballstatsjm.ui.countries
 import com.example.footballstatsjm.domain.country.Country
 import com.example.footballstatsjm.domain.country.CountryRepository
 import com.example.footballstatsjm.schedulers.Schedulers
+import com.example.footballstatsjm.ui.leagues.LeaguesScreen
 import com.github.terrakok.cicerone.Router
 import dagger.assisted.AssistedInject
 import io.reactivex.disposables.CompositeDisposable
@@ -32,6 +33,14 @@ class CountriesPresenter @AssistedInject constructor(
     private fun onCountriesSuccess(countries: List<Country>) {
         viewState.showCountries(countries = countries)
     }
+
+    fun displayLeagues(country: Country) =
+        router.navigateTo(
+            LeaguesScreen(
+                countryCode = country.code,
+                countryName = country.name
+            )
+        )
 
     override fun onDestroy() {
         disposables.clear()

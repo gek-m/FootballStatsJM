@@ -49,7 +49,7 @@ fun TextView.setStartDrawableCircleImageFromUri(uri: String, placeholder: Int = 
         .apply(
             RequestOptions
                 .circleCropTransform()
-                .override(100.dp(this.context))
+                .override(50.dp(this.context))
         )
         .into(object : CustomViewTarget<TextView, Drawable>(this) {
 

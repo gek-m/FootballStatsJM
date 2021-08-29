@@ -4,6 +4,7 @@ import android.content.Context
 import com.example.footballstatsjm.FootballStats
 import com.example.footballstatsjm.domain.di.modules.ApiModule
 import com.example.footballstatsjm.domain.di.modules.CountriesModule
+import com.example.footballstatsjm.domain.di.modules.LeaguesModule
 import com.example.footballstatsjm.schedulers.Schedulers
 import com.github.terrakok.cicerone.NavigatorHolder
 import com.github.terrakok.cicerone.Router
@@ -15,7 +16,7 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(
-    modules = [AndroidInjectionModule::class, ApiModule::class, CountriesModule::class]
+    modules = [AndroidInjectionModule::class, ApiModule::class, CountriesModule::class, LeaguesModule::class]
 )
 interface ApplicationComponent : AndroidInjector<FootballStats> {
 

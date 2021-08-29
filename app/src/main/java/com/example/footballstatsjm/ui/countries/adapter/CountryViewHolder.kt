@@ -13,7 +13,7 @@ class CountryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bind(country: Country, delegate: CountriesAdapter.Delegate?) {
 
         val countryName: TextView = itemView.findViewById(R.id.country)
-        countryName.setStartDrawableCircleImageFromUri(country.flag)
+        //countryName.setStartDrawableCircleImageFromUri(country.flag)
         countryName.text = country.name
 
         countryName.click {

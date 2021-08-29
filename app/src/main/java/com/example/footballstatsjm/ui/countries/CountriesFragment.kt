@@ -27,7 +27,7 @@ class CountriesFragment : AbsFragment(R.layout.view_countries),
     @Inject
     lateinit var countriesPresenterFactory: CountriesPresenterFactory
 
-    private val presenter: CountriesPresenter by moxyPresenter{
+    private val presenter: CountriesPresenter by moxyPresenter {
         countriesPresenterFactory.create()
     }
 
@@ -38,7 +38,6 @@ class CountriesFragment : AbsFragment(R.layout.view_countries),
         super.onViewCreated(view, savedInstanceState)
 
         viewBinding.countries.adapter = countriesAdapter
-
     }
 
     override fun showCountries(countries: List<Country>) {
@@ -49,7 +48,7 @@ class CountriesFragment : AbsFragment(R.layout.view_countries),
         Toast.makeText(requireContext(), error.message, Toast.LENGTH_LONG).show()
     }
 
-    override fun onCountySelected(user: Country) {
-        TODO("Not yet implemented")
+    override fun onCountySelected(country: Country) {
+        presenter.displayLeagues(country)
     }
 }
