@@ -7,8 +7,8 @@ import com.example.footballstatsjm.domain.league.datasource.LeagueDataSource
 import com.example.footballstatsjm.ui.leagues.LeaguesFragment
 import dagger.Binds
 import dagger.Module
+import dagger.Reusable
 import dagger.android.ContributesAndroidInjector
-import javax.inject.Singleton
 
 @Module
 interface LeaguesModule {
@@ -16,11 +16,11 @@ interface LeaguesModule {
     @ContributesAndroidInjector
     fun bindLeaguesFragment(): LeaguesFragment
 
-    @Singleton
+    @Reusable
     @Binds
     fun bindLeagueRepository(repository: LeagueRepositoryImpl): LeagueRepository
 
-    @Singleton
+    @Reusable
     @Binds
     fun bindLeagueDataSource(dataSource: CloudLeagueDataSource): LeagueDataSource
 }

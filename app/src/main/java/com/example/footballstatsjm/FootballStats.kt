@@ -21,8 +21,8 @@ class FootballStats : DaggerApplication() {
             }
             .build()
 
-    override fun onCreate() {
+    /*override fun onCreate() {
         super.onCreate()
         RxJavaPlugins.setErrorHandler { }
-    }
+    }*/
 }

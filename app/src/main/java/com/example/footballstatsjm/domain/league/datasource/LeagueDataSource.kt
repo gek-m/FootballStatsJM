@@ -1,6 +1,5 @@
 package com.example.footballstatsjm.domain.league.datasource
 
-import com.example.footballstatsjm.domain.league.League
 import com.example.footballstatsjm.domain.league.LeagueResponseDetails
 import io.reactivex.Single
 

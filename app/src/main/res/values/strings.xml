@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">FootballStatsJM</string>
     <string name="league_title">Country leagues:</string>
+    <string name="table_rank_title">#</string>
+    <string name="table_team_name_title">Team</string>
+    <string name="table_played_games_title">P</string>
+    <string name="table_goals_for_title">F</string>
+    <string name="table_goals_against_title">A</string>
+    <string name="table_points_title">PTS</string>
+    <string name="table_goals_different_title">GD</string>
 </resources>

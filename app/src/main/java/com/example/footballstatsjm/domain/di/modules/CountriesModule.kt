@@ -8,6 +8,7 @@ import com.example.footballstatsjm.domain.country.datasource.CountryDataSource
 import com.example.footballstatsjm.ui.countries.CountriesFragment
 import dagger.Binds
 import dagger.Module
+import dagger.Reusable
 import dagger.android.ContributesAndroidInjector
 import javax.inject.Singleton
 
@@ -20,11 +21,11 @@ interface CountriesModule {
     @ContributesAndroidInjector
     fun bindCountriesFragment(): CountriesFragment
 
-    @Singleton
+    @Reusable
     @Binds
     fun bindCountryRepository(repository: CountryRepositoryImp): CountryRepository
 
-    @Singleton
+    @Reusable
     @Binds
     fun bindCountryDataSource(dataSource: CloudCountryDataSource): CountryDataSource
 }
