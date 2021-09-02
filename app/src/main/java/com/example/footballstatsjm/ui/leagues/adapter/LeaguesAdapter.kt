@@ -13,7 +13,7 @@ class LeaguesAdapter(
 
     interface Delegate {
 
-        fun onLeagueSelected(league: League)
+        fun onLeagueSelected(league: LeagueResponseDetails)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LeagueViewHolder =

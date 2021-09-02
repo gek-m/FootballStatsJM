@@ -32,7 +32,7 @@ class CountriesFragment : AbsFragment(R.layout.view_countries),
     }
 
     private val countriesAdapter = CountriesAdapter(delegate = this)
-    private val viewBinding: ViewCountriesBinding by viewBinding(ViewCountriesBinding::bind)
+    private val viewBinding: ViewCountriesBinding by viewBinding()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

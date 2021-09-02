@@ -69,7 +69,9 @@ class LeaguesFragment : AbsFragment(R.layout.fragment_leagues), LeaguesView,
         Toast.makeText(requireContext(), error.message, Toast.LENGTH_LONG).show()
     }
 
-    override fun onLeagueSelected(league: League) {
-        TODO("Not yet implemented")
+    override fun onLeagueSelected(leagueResponseDetails: LeagueResponseDetails) {
+        presenter.displayLeagueSeason(
+            leagueResponseDetails = leagueResponseDetails
+        )
     }
 }

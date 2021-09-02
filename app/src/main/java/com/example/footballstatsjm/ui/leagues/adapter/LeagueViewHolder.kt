@@ -4,6 +4,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.footballstatsjm.R
+import com.example.footballstatsjm.click
 import com.example.footballstatsjm.domain.league.LeagueResponseDetails
 import com.example.footballstatsjm.setStartDrawableCircleImageFromUri
 
@@ -14,5 +15,9 @@ class LeagueViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val leagueName: TextView = itemView.findViewById(R.id.leagueName)
         leagueName.setStartDrawableCircleImageFromUri(league.league.logo)
         leagueName.text = league.league.name
+
+        leagueName.click {
+            delegate?.onLeagueSelected(league)
+        }
     }
 }
