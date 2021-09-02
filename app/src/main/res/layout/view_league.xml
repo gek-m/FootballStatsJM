@@ -1,12 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/leagueName"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="@dimen/padding_17_dp"
-    android:textSize="@dimen/size_24_sp"
-    android:textColor="@android:color/black"
-    android:gravity="center_vertical"
-    android:drawablePadding="@dimen/padding_17_dp"
-    tools:text="League" />
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/leagueName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_17_dp"
+        android:textSize="@dimen/size_24_sp"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:drawablePadding="@dimen/padding_17_dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="League" />
+
+    <TextView
+        android:id="@+id/seasonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/padding_50_dp"
+        android:padding="@dimen/padding_15_dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:drawablePadding="@dimen/padding_17_dp"
+        android:visibility="gone"
+        android:text="2021"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/leagueName"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

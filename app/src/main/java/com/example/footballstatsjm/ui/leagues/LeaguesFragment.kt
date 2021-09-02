@@ -10,7 +10,6 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.footballstatsjm.R
 import com.example.footballstatsjm.arguments
 import com.example.footballstatsjm.databinding.FragmentLeaguesBinding
-import com.example.footballstatsjm.domain.league.League
 import com.example.footballstatsjm.domain.league.LeagueResponseDetails
 import com.example.footballstatsjm.ui.abs.AbsFragment
 import com.example.footballstatsjm.ui.leagues.adapter.LeaguesAdapter
@@ -69,9 +68,9 @@ class LeaguesFragment : AbsFragment(R.layout.fragment_leagues), LeaguesView,
         Toast.makeText(requireContext(), error.message, Toast.LENGTH_LONG).show()
     }
 
-    override fun onLeagueSelected(leagueResponseDetails: LeagueResponseDetails) {
+    override fun onLeagueSelected(league: LeagueResponseDetails) {
         presenter.displayLeagueSeason(
-            leagueResponseDetails = leagueResponseDetails
+            leagueResponseDetails = league
         )
     }
 }
