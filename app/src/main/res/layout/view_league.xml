@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="League" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/seasonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,11 +28,22 @@
         android:textColor="@android:color/black"
         android:gravity="center_vertical"
         android:drawablePadding="@dimen/padding_17_dp"
-        android:visibility="gone"
+        android:visibility="visible"
         android:text="2021"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/leagueName"/>
+        app:layout_constraintTop_toBottomOf="@id/leagueName"/>-->
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/seasons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/leagueName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:paddingStart="@dimen/padding_50_dp"
+        android:padding="@dimen/padding_15_dp"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:ignore="MissingConstraints,RtlSymmetry" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

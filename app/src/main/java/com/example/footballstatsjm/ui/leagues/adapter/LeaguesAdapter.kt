@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import com.example.footballstatsjm.R
-import com.example.footballstatsjm.domain.league.League
 import com.example.footballstatsjm.domain.league.LeagueResponseDetails
 
 class LeaguesAdapter(

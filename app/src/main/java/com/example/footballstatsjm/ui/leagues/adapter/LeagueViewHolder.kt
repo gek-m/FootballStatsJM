@@ -12,19 +12,24 @@ class LeagueViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     private val viewBinding: ViewLeagueBinding by viewBinding()
 
+    private val seasonAdapter = SeasonAdapter()
+
     fun bind(league: LeagueResponseDetails, delegate: LeaguesAdapter.Delegate?) {
         with(viewBinding) {
             leagueName.setStartDrawableCircleImageFromUri(league.league.logo)
             leagueName.text = league.league.name
 
+            seasons.adapter = seasonAdapter
+
             leagueName.click {
-                seasonName.apply {
+                seasons.apply {
                     visibility = if (this.visibility == View.GONE) View.VISIBLE else View.GONE
                 }
             }
-            seasonName.click {
+
+            /*seasonName.click {
                 delegate?.onLeagueSelected(league)
-            }
+            }*/
         }
 
     }
