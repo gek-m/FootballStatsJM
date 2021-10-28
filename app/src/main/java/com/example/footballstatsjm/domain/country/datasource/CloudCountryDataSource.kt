@@ -10,8 +10,13 @@ class CloudCountryDataSource @Inject constructor(
     private val footballApi: FootballApi
 ): CountryDataSource {
 
-    override fun getCountries(): Single<List<Country>> =
+    /*override fun getCountries(): Single<List<Country>> =
         footballApi
             .getCountries()
-            .map { it.response }
+            .map { it.response }*/
+
+    override fun getCountries(): List<Country> =
+        footballApi
+            .getCountries()
+            .response
 }

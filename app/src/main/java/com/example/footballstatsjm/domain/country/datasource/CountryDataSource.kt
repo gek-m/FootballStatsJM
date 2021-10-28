@@ -6,5 +6,6 @@ import io.reactivex.Single
 
 interface CountryDataSource {
 
-    fun getCountries(): Single<List<Country>>
+    //fun getCountries(): Single<List<Country>>
+    fun getCountries(): List<Country>
 }
