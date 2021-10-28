@@ -19,7 +19,10 @@ class CountriesPresenter @AssistedInject constructor(
     private val disposables = CompositeDisposable()
 
     override fun onFirstViewAttach() {
-        disposables +=
+
+        countryRepository.getCountries()
+
+        /*disposables +=
             countryRepository
                 .getCountries()
                 .observeOn(schedulers.main())
@@ -27,7 +30,7 @@ class CountriesPresenter @AssistedInject constructor(
                 .subscribe(
                     ::onCountriesSuccess,
                     viewState::showError
-                )
+                )*/
     }
 
     private fun onCountriesSuccess(countries: List<Country>) {

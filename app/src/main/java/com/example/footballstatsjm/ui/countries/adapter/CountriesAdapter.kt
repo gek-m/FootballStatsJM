@@ -12,7 +12,7 @@ class CountriesAdapter (
 
     interface Delegate {
 
-        fun onCountySelected(user: Country)
+        fun onCountySelected(country: Country)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryViewHolder =

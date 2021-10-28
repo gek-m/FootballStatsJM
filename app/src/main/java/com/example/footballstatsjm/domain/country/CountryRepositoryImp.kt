@@ -8,6 +8,9 @@ class CountryRepositoryImp @Inject constructor(
     private val cloud: CountryDataSource
 ) : CountryRepository {
 
-    override fun getCountries(): Observable<List<Country>> =
-        cloud.getCountries().toObservable()
+    //override fun getCountries(): Observable<List<Country>> =
+//        cloud.getCountries().toObservable()
+
+    override fun getCountries(): List<Country> =
+        cloud.getCountries()
 }

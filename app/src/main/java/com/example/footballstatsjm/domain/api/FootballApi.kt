@@ -9,8 +9,20 @@ import retrofit2.http.Query
 
 interface FootballApi {
 
-    @GET("/countries")
+    /*@GET("/countries")
     fun getCountries(): Single<CountryResponse>
+
+    @GET("/leagues")
+    fun getLeagues(@Query("code") code: String): Single<LeagueResponse>
+
+    @GET("/standings")
+    fun getStandings(
+        @Query("season") seasonYear: Int,
+        @Query("league") leagueId: Int
+    ): Single<SeasonResponse>*/
+
+    @GET("/countries")
+    fun getCountries(): CountryResponse
 
     @GET("/leagues")
     fun getLeagues(@Query("code") code: String): Single<LeagueResponse>
